@@ -228,7 +228,7 @@ module.exports = function (options) {
             var sts = content.match(/<script[^>]*src=['"]?([^>'"]*)['"]?[^>]*>[^<]*<\/script>/g);
             if (util.isArray(sts) && sts.length) {
                 for (var i = 0, len = sts.length; i < len; i++) {
-                    var _RULE = sts[i].match(/src=['"]?([^>'"]*)['"]?/);
+                    var _RULE = sts[i].match(/src=['"]?([^'"]*)['"]?/);
                     if (_RULE[1]) {
                         var _UrlPs = parseURL(_RULE[1]);
                         var _Query = queryToJson(_UrlPs.query);
